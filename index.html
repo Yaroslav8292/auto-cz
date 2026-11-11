@@ -3,154 +3,180 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Регистрация машины из ЕС в Чехии — за один день, без посредников</title>
-<meta name="description" content="Пошаговый гайд: ввоз и регистрация авто из ЕС в Чехии по официальной процедуре. 4 документа, 800 Kč, регистрация в день обращения.">
+<title>Два руководства по Чехии: авто из ЕС и работа без посредников</title>
+<meta name="description" content="Практические руководства по Чехии на основе официальных источников: регистрация авто из ЕС и проверка агентства/договора до подписи.">
 <style>
   :root{
     --ink:#14161a; --muted:#5b6472; --line:#e3e6ea; --bg:#fbfbfa;
     --accent:#0f5c4a; --accent-soft:#eaf3f0; --warn:#8a4b00; --warn-soft:#fdf3e6;
   }
   *{box-sizing:border-box}
-  body{
-    margin:0; background:var(--bg); color:var(--ink);
+  body{margin:0;background:var(--bg);color:var(--ink);
     font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    -webkit-font-smoothing:antialiased;
-  }
-  .wrap{max-width:760px;margin:0 auto;padding:0 22px}
+    -webkit-font-smoothing:antialiased}
+  .wrap{max-width:780px;margin:0 auto;padding:0 22px}
   header{border-bottom:1px solid var(--line);padding:18px 0}
-  .brand{font-weight:650;letter-spacing:.01em}
+  .brand{font-weight:650}
   .brand span{color:var(--muted);font-weight:400}
-  h1{font-size:34px;line-height:1.2;letter-spacing:-.02em;margin:44px 0 14px;font-weight:700}
-  h2{font-size:21px;margin:44px 0 12px;letter-spacing:-.01em}
+  h1{font-size:33px;line-height:1.2;letter-spacing:-.02em;margin:42px 0 14px;font-weight:700}
+  h2{font-size:22px;margin:0 0 6px;letter-spacing:-.01em}
+  .lead{font-size:18px;color:var(--muted);margin-bottom:8px}
   p{margin:0 0 14px}
-  .lead{font-size:19px;color:var(--muted);margin-bottom:26px}
-  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:26px 0}
-  .fact{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px}
-  .fact b{display:block;font-size:22px;letter-spacing:-.02em}
-  .fact small{color:var(--muted);font-size:13px;line-height:1.45;display:block;margin-top:4px}
-  ul{padding-left:20px;margin:0 0 14px}
-  li{margin-bottom:9px}
-  .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px;margin:22px 0}
-  .trap{background:var(--warn-soft);border:1px solid #f0dcc0;border-radius:14px;padding:20px;margin:22px 0}
-  .trap h3{margin:0 0 8px;font-size:17px;color:var(--warn)}
-  .offer{background:var(--accent-soft);border:1px solid #cfe3dc;border-radius:16px;padding:26px;margin:30px 0}
-  .price{font-size:30px;font-weight:700;letter-spacing:-.02em}
-  .price s{color:var(--muted);font-weight:400;font-size:19px;margin-left:10px}
-  form{display:grid;grid-template-columns:1fr auto;gap:10px;margin-top:16px}
-  input[type=email]{
-    font:inherit;padding:13px 14px;border:1px solid #c9d2cf;border-radius:10px;background:#fff;width:100%;
-  }
-  button{
-    font:inherit;font-weight:600;padding:13px 22px;border:0;border-radius:10px;
-    background:var(--accent);color:#fff;cursor:pointer;white-space:nowrap;
-  }
+  .card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px;margin:22px 0;transition:box-shadow .2s,border-color .2s}
+  .card.focus{border-color:#9cc3b6;box-shadow:0 0 0 3px rgba(15,92,74,.08)}
+  .tag{display:inline-block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+  .who{color:var(--muted);margin:6px 0 16px}
+  ul{padding-left:20px;margin:0 0 16px}
+  li{margin-bottom:8px}
+  .trap{background:var(--warn-soft);border:1px solid #f0dcc0;border-radius:12px;padding:16px;margin:0 0 18px}
+  .trap b{color:var(--warn)}
+  .buy{background:var(--accent-soft);border:1px solid #cfe3dc;border-radius:12px;padding:18px}
+  .price{font-size:26px;font-weight:700;letter-spacing:-.02em}
+  .price s{color:var(--muted);font-weight:400;font-size:17px;margin-left:9px}
+  form{display:grid;grid-template-columns:1fr auto;gap:9px;margin-top:12px}
+  input[type=email]{font:inherit;padding:12px 14px;border:1px solid #c9d2cf;border-radius:10px;background:#fff;width:100%}
+  button{font:inherit;font-weight:600;padding:12px 20px;border:0;border-radius:10px;background:var(--accent);color:#fff;cursor:pointer;white-space:nowrap}
   button:hover{background:#0c4a3c}
-  .fine{font-size:13px;color:var(--muted);margin-top:10px}
-  .ok{display:none;background:#e8f5ee;border:1px solid #bfe0cc;color:#185c3a;padding:14px;border-radius:10px;margin-top:12px;font-size:15px}
-  .src{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:46px;padding:18px 0 60px}
+  .fine{font-size:13px;color:var(--muted);margin:9px 0 0}
+  .ok{display:none;background:#e8f5ee;border:1px solid #bfe0cc;color:#185c3a;padding:13px;border-radius:10px;margin-top:11px;font-size:15px}
+  .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:18px 0 0}
+  .fact{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px}
+  .fact b{display:block;font-size:19px;letter-spacing:-.02em}
+  .fact small{color:var(--muted);font-size:12.5px;line-height:1.4;display:block;margin-top:3px}
+  .src{font-size:13px;color:var(--muted);border-top:1px solid var(--line);margin-top:44px;padding:18px 0 20px}
   .src a{color:var(--accent)}
-  footer{font-size:12px;color:var(--muted);padding-bottom:40px}
-  @media (max-width:620px){
-    h1{font-size:27px} .facts{grid-template-columns:1fr} form{grid-template-columns:1fr}
-    button{width:100%}
+  footer{font-size:12px;color:var(--muted);padding-bottom:44px}
+  @media (max-width:640px){
+    h1{font-size:26px} .facts{grid-template-columns:1fr} form{grid-template-columns:1fr} button{width:100%}
+    .card{padding:20px}
   }
 </style>
 </head>
 <body>
-<header><div class="wrap"><div class="brand">Авто в Чехии <span>· практические разборы</span></div></div></header>
+<header><div class="wrap"><div class="brand">Чехия без посредников <span>· практические руководства</span></div></div></header>
 
 <main class="wrap">
-  <h1>Машина из ЕС в Чехию: регистрация за один визит — и что проверить до покупки</h1>
-  <p class="lead">Купил авто в Германии, Польше или Австрии и везешь в Чехию. Процедура проходится за день — но только если документы собраны правильно и до сделки проверено три вещи. Ниже — официальные требования и места, где люди теряют деньги.</p>
+  <h1>Два руководства по Чехии — по официальным процедурам, а не по форумам</h1>
+  <p class="lead">Каждое собрано из первоисточников, с датой проверки тарифов. Оба — про то, что дороже всего стоит по незнанию.</p>
 
-  <div class="facts">
-    <div class="fact"><b>800 Kč</b><small>пошлина при личной подаче. Через Portál dopravy — 640 Kč</small></div>
-    <div class="fact"><b>В день обращения</b><small>если все документы на руках — «na počkání»</small></div>
-    <div class="fact"><b>Любой ORP</b><small>уряд не привязан к месту жительства</small></div>
-  </div>
+  <!-- ============ ОФФЕР F ============ -->
+  <section class="card" id="f">
+    <div class="tag">Руководство 1 · ввоз авто</div>
+    <h2>Машина из ЕС в Чехию: регистрация за один визит — и что проверить до покупки</h2>
+    <p class="who">Для того, кто купил или собирается купить авто в Германии, Польше или Австрии и везёт его в Чехию.</p>
 
-  <h2>Что реально требуется по закону</h2>
-  <ul>
-    <li>Заявление о записи в регистр + удостоверение личности; подтверждение пребывания — если оно требуется для условий регистрации.</li>
-    <li>Иностранные документы на машину: техпаспорт и <em>osvědčení o registraci</em> — если он из двух частей, нужны обе.</li>
-    <li><em>Evidenční kontrola</em> — обязательна для ввезённого б/у авто; результат уряд проверяет электронно, бумажный протокол не носишь.</li>
-    <li><em>Povinné ručení</em> должно действовать до регистрации; уряд проверяет его сам через ČKP — зелёная карта больше не нужна.</li>
-    <li>Если у машины нет европейского одобрения типа (WVTA) — отдельное решение о признании технической пригодности, его выдаёт тот же уряд.</li>
-  </ul>
+    <div class="facts">
+      <div class="fact"><b>800 Kč</b><small>пошлина лично; через Portál dopravy — 640 Kč</small></div>
+      <div class="fact"><b>В день обращения</b><small>если документы собраны верно</small></div>
+      <div class="fact"><b>Любой ORP</b><small>уряд не привязан к месту жительства</small></div>
+    </div>
 
-  <div class="trap">
-    <h3>Ловушка на 21 %, о которой узнают уже после покупки</h3>
-    <p style="margin:0">Для DPH машина считается <b>новой</b>, если с первого ввода в эксплуатацию прошло не больше 6 месяцев <b>или</b> пробег не больше 6 000 км. Тогда к цене добавляется отдельная процедура с чешским DPH, и «выгодная» машина из Германии становится дороже на пятую часть. Это проверяется по документам, а не по словам продавца.</p>
-  </div>
+    <p style="margin-top:18px">Процедура проходится за один визит — но только если до сделки проверено три вещи. Об этом гайд и вторая его половина: как не купить машину с залогом или с DPH-долгом.</p>
 
-  <h2>Что будет в гайде</h2>
-  <div class="card">
+    <div class="trap"><b>Ловушка на 21 %.</b> Для DPH машина считается новой, если с первого ввода в эксплуатацию прошло ≤6 месяцев <b>или</b> пробег ≤6 000 км. Тогда к цене добавляется отдельная процедура с чешским DPH — и «выгодная» машина из Германии дорожает на пятую часть.</div>
+
     <ul>
-      <li>Порядок шагов от сделки до номеров — с чешскими названиями документов, чтобы на уряде понимать каждое слово.</li>
-      <li>Проверка перед покупкой: залоги, «odhláška», COC, реальность пробега, чего не бывает в объявлениях.</li>
-      <li>Калькулятор всех платежей: пошлина, evidenční kontrola, страховка, транзитные номера — с датой проверки тарифов.</li>
-      <li>Шаблоны: договор купли-продажи и доверенность (plná moc), если оформляешь не сам.</li>
-      <li>Что делать, если уряд требует «дополнительную техническую документацию» — сценарий, на котором чаще всего застревают.</li>
+      <li>Шаги от сделки до номеров, с чешскими названиями документов.</li>
+      <li>Проверка до покупки: залоги, «odhláška», COC, реальность пробега.</li>
+      <li>Таблица всех платежей: пошлина, <em>evidenční kontrola</em>, страховка — с датой проверки.</li>
+      <li>Шаблоны: договор купли-продажи и доверенность (<em>plná moc</em>).</li>
       <li>Чек-лист на один лист: распечатал, пошёл, зарегистрировал.</li>
     </ul>
-  </div>
 
-  <h2>Кому не подойдёт</h2>
-  <p>Если машина из страны вне ЕС — там добавляется таможня, и это другая процедура. Если авто уже на чешских номерах — это переоформление, тоже другой разбор. Гайд только про ввоз б/у авто из ЕС.</p>
+    <div class="buy">
+      <div class="price">€19 <s>€34</s></div>
+      <p class="fine">Платить сейчас не нужно — оставь почту, напишу, когда гайд будет готов.</p>
+      <form data-offer="F">
+        <input type="email" name="email" placeholder="твой e-mail" autocomplete="email" required>
+        <button type="submit">Записаться</button>
+      </form>
+      <div class="ok">Готово. Напишу, как только гайд будет собран.</div>
+    </div>
+  </section>
 
-  <div class="offer">
-    <p style="margin:0 0 6px;font-weight:600">Гайд «Авто из ЕС в Чехию: регистрация за один визит»</p>
-    <div class="price">€19 <s>€34</s></div>
-    <p class="fine" style="margin:6px 0 0">Цена для тех, кто впишется до выхода. <b>Платить сейчас ничего не нужно</b> — оставь почту, напишу, когда гайд будет готов.</p>
-    <form id="wl" novalidate>
-      <input type="email" name="email" id="email" placeholder="твой e-mail" autocomplete="email" required>
-      <button type="submit">Записаться в лист ожидания</button>
-    </form>
-    <div class="ok" id="ok">Готово. Напишу на указанную почту, как только гайд будет собран — и пришлю чек-лист раньше остальных.</div>
-    <p class="fine">Одна рассылка по теме, без спама. Отписка — одним ответом на письмо.</p>
-  </div>
+  <!-- ============ ОФФЕР D ============ -->
+  <section class="card" id="d">
+    <div class="tag">Руководство 2 · работа</div>
+    <h2>Работа в Чехии: как проверить агентство и договор до подписи</h2>
+    <p class="who">Для того, кому агентство обещает работу и жильё, а он подписывает договор, половину которого не понимает.</p>
 
-  <h2>Вопросы</h2>
-  <p><b>Нужен ли чешский?</b> На уряде — минимальный: документы и названия процедур. В гайде все термины даны с переводом и произношением.</p>
-  <p><b>Это вместо юриста?</b> Нет. Это точная карта официальной процедуры. Сложные случаи (лизинг, залог, авто после аварии) — к специалисту, и в гайде сказано, где именно эта граница.</p>
-  <p><b>Почему €19, а не «как у всех»?</b> Для сравнения: посредник берёт 1 200 Kč сверх пошлины и делает за 2–4 дня (spzsluzby.cz, проверено 11.11.2026). Гайд не экономит эти 1 200 — он нужен, чтобы не приехать на уряд второй раз и не купить машину с залогом или с DPH-долгом. Одна неверная покупка стоит дороже сотни гайдов.</p>
+    <p>Здесь дорого стоит не пошлина, а подпись. Проверка занимает вечер и делается до того, как отдал документы и деньги за «оформление».</p>
+
+    <ul>
+      <li>Что должно быть в договоре до подписи: кто работодатель, ставка, часы, место, срок.</li>
+      <li>Как проверить, есть ли у агентства разрешение на посредничество, и что спрашивать на входе.</li>
+      <li>Жильё и удержания: как посчитать, во что реально обойдётся «бесплатное» жильё от агентства.</li>
+      <li>Если не платят: куда идти и что приложить — у чешской инспекции труда (SÚIP) есть украинская версия сайта.</li>
+      <li>Чек-лист перед подписью и шаблон письма работодателю.</li>
+    </ul>
+
+    <div class="buy">
+      <div class="price">€19 <s>€34</s></div>
+      <p class="fine">Платить сейчас не нужно — оставь почту, напишу, когда гайд будет готов.</p>
+      <form data-offer="D">
+        <input type="email" name="email" placeholder="твой e-mail" autocomplete="email" required>
+        <button type="submit">Записаться</button>
+      </form>
+      <div class="ok">Готово. Напишу, как только гайд будет собран.</div>
+    </div>
+  </section>
+
+  <h2 style="margin-top:38px">Кому не подойдёт</h2>
+  <p><b>Авто:</b> если машина из страны вне ЕС — там таможня и другая процедура; если авто уже на чешских номерах — это переоформление, тоже другой разбор.</p>
+  <p><b>Работа:</b> если тебе нужен юридический спор с работодателем или представительство в суде — это к адвокату. Гайд про то, как не подписать плохой договор и куда обратиться, когда уже подписал.</p>
+
+  <h2 style="margin-top:34px">Вопросы</h2>
+  <p><b>Нужен ли чешский?</b> На уряде и в договоре — минимальный, но именно на нём ловят. В руководствах все термины даны с переводом.</p>
+  <p><b>Это вместо юриста?</b> Нет. Это точная карта официальной процедуры и граница, где нужен специалист.</p>
+  <p><b>Почему €19?</b> Для сравнения: посредник за регистрацию авто берёт 1 200 Kč сверх пошлины и делает 2–4 дня. Руководство нужно не для того, чтобы сэкономить эту тысячу, а чтобы не приехать на уряд второй раз и не подписать договор, из которого потом не выйти.</p>
 
   <p class="src">
-    Источник фактов: Ministerstvo dopravy ČR, «Registrace ojetého vozidla dovezeného z EU», запись от 12. 5. 2025 —
-    <a href="https://md.gov.cz/Zivotni-situace/Registr-vozidel/dovoz-eu" target="_blank" rel="noopener">md.gov.cz</a>.
-    Рыночная цена услуги «под ключ» (1 200 Kč + пошлина, 2–4 дня) —
-    <a href="https://spzsluzby.cz/prihlaseni-dovezeneho-vozidla/" target="_blank" rel="noopener">spzsluzby.cz</a>.
-    Пошлины и требования проверены 11. 11. 2026; в гайде тарифы идут с датой проверки.
+    Первоисточники: Ministerstvo dopravy ČR —
+    <a href="https://md.gov.cz/Zivotni-situace/Registr-vozidel/dovoz-eu" target="_blank" rel="noopener">регистрация авто из ЕС</a> (запись 12. 5. 2025);
+    рыночная цена услуги «под ключ» —
+    <a href="https://spzsluzby.cz/prihlaseni-dovezeneho-vozidla/" target="_blank" rel="noopener">spzsluzby.cz</a>;
+    чешская инспекция труда —
+    <a href="https://www.suip.cz/" target="_blank" rel="noopener">suip.cz</a>.
+    Требования и тарифы проверены 11. 11. 2026.
   </p>
 </main>
 
-<footer class="wrap">Материал носит информационный характер и не является юридической консультацией.</footer>
+<footer class="wrap">Материалы носят информационный характер и не являются юридической консультацией.</footer>
 
 <script>
-  // ВАЖНО: подставить id формы FormSubmit (см. инструкцию) вместо EMAIL_ЗДЕСЬ.
-  var ENDPOINT = "https://formsubmit.co/ajax/EMAIL_ЗДЕСЬ";
+  // FormSubmit: адрес уже подставлен. После первого сабмита придёт письмо-активация.
+  var ENDPOINT = "https://formsubmit.co/ajax/avto.cz@yandex.ru";
 
-  document.getElementById("wl").addEventListener("submit", function (e) {
-    e.preventDefault();
-    var email = document.getElementById("email").value.trim();
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      document.getElementById("email").focus();
-      return;
-    }
-    if (ENDPOINT.indexOf("EMAIL_ЗДЕСЬ") !== -1) {
-      alert("Форма ещё не подключена: подставь адрес в переменной ENDPOINT.");
-      return;
-    }
-    fetch(ENDPOINT, {
-      method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
-      body: JSON.stringify({ email: email, _subject: "Лист ожидания: авто из ЕС" })
-    }).then(function (r) {
-      if (!r.ok) throw new Error(r.status);
-      document.getElementById("wl").style.display = "none";
-      document.getElementById("ok").style.display = "block";
-    }).catch(function () {
-      alert("Не получилось отправить. Напиши на почту — добавлю вручную.");
+  // Атрибуция: ссылка с ?o=f или ?o=d подсвечивает нужный оффер.
+  var offer = new URLSearchParams(location.search).get("o");
+  if (offer) {
+    var el = document.getElementById(offer.toLowerCase());
+    if (el) el.classList.add("focus");
+  }
+
+  document.querySelectorAll("form[data-offer]").forEach(function (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var input = form.querySelector("input[type=email]");
+      var email = input.value.trim();
+      if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) { input.focus(); return; }
+      var offerCode = form.getAttribute("data-offer");
+      fetch(ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          email: email,
+          offer: offerCode,
+          source: location.search || "direct",
+          _subject: "Лист ожидания · " + offerCode + " (" + (offerCode === "F" ? "авто" : "работа") + ")"
+        })
+      }).then(function (r) {
+        if (!r.ok) throw new Error(r.status);
+        form.style.display = "none";
+        form.parentNode.querySelector(".ok").style.display = "block";
+      }).catch(function () {
+        alert("Не получилось отправить. Напиши на почту — добавлю вручную.");
+      });
     });
   });
 </script>
