@@ -39,6 +39,8 @@
   button:hover{background:#0c4a3c}
   .fine{font-size:13px;color:var(--muted);margin:9px 0 0}
   .ok{display:none;background:#e8f5ee;border:1px solid #bfe0cc;color:#185c3a;padding:13px;border-radius:10px;margin-top:11px;font-size:15px}
+  .ok a{color:#185c3a;font-weight:700}
+  .ok small{display:block;margin-top:7px;font-size:12.5px;line-height:1.45;color:#3d6a52;font-weight:400}
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:18px 0 0}
   .fact{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px}
   .fact b{display:block;font-size:19px;letter-spacing:-.02em}
@@ -57,7 +59,7 @@
 
 <main class="wrap">
   <h1>Два руководства по Чехии — по официальным процедурам, а не по форумам</h1>
-  <p class="lead">Каждое собрано из первоисточников, с датой проверки тарифов. Оба — про то, что дороже всего стоит по незнанию.</p>
+  <p class="lead">Первое руководство готово: 26 страниц, скачивается бесплатно. Второе в работе. Оба собраны из первоисточников, с датой проверки.</p>
 
   <!-- ============ ОФФЕР F ============ -->
   <section class="card" id="f">
@@ -84,13 +86,14 @@
     </ul>
 
     <div class="buy">
-      <div class="price">€19 <s>€34</s></div>
-      <p class="fine">Платить сейчас не нужно — оставь почту, напишу, когда гайд будет готов.</p>
+      <div class="price">Бесплатно <s>€19</s></div>
+      <p class="fine">Гайд готов: 26 страниц, факты проверены 12. 11. 2026. Оставь почту и скачай сразу — ссылка появится после отправки.</p>
       <form data-offer="F">
         <input type="email" name="email" placeholder="твой e-mail" autocomplete="email" required>
-        <button type="submit">Записаться</button>
+        <button type="submit">Получить PDF</button>
       </form>
-      <div class="ok">Готово. Напишу, как только гайд будет собран.</div>
+      <div class="ok">Готово. <a href="auto-eu-cz-guide.pdf" download>Скачать гайд (PDF, 26 страниц)</a>
+        <small>Раздел про DPH написан по тексту закона, но четыре практических вопроса там помечены как открытые — их закрою после ответа налогового консультанта и пришлю обновление на эту почту.</small></div>
       <p class="fine">Если форма не отправилась — напиши на <a href="mailto:autoreg.cz@gmail.com">autoreg.cz@gmail.com</a>.</p>
     </div>
   </section>
@@ -113,12 +116,12 @@
 
     <div class="buy">
       <div class="price">€19 <s>€34</s></div>
-      <p class="fine">Платить сейчас не нужно — оставь почту, напишу, когда гайд будет готов.</p>
+      <p class="fine">Этот гайд ещё пишу. Оставь почту — напишу, когда будет готов, и пришлю первым, бесплатно.</p>
       <form data-offer="D">
         <input type="email" name="email" placeholder="твой e-mail" autocomplete="email" required>
         <button type="submit">Записаться</button>
       </form>
-      <div class="ok">Готово. Напишу, как только гайд будет собран.</div>
+      <div class="ok">Готово. Напишу, когда гайд по работе будет готов.</div>
       <p class="fine">Если форма не отправилась — напиши на <a href="mailto:autoreg.cz@gmail.com">autoreg.cz@gmail.com</a>.</p>
     </div>
   </section>
@@ -130,7 +133,7 @@
   <h2 style="margin-top:34px">Вопросы</h2>
   <p><b>Нужен ли чешский?</b> На уряде и в договоре — минимальный, но именно на нём ловят. В руководствах все термины даны с переводом.</p>
   <p><b>Это вместо юриста?</b> Нет. Это точная карта официальной процедуры и граница, где нужен специалист.</p>
-  <p><b>Почему €19?</b> Для сравнения: посредник за регистрацию авто берёт 1 200 Kč сверх пошлины и делает 2–4 дня. Руководство нужно не для того, чтобы сэкономить эту тысячу, а чтобы не приехать на уряд второй раз и не подписать договор, из которого потом не выйти.</p>
+  <p><b>Почему гайд по авто бесплатный?</b> Он готов, а раздел про DPH — нет: четыре практических вопроса ждут ответа налогового консультанта. Отдаю сейчас, чтобы получить замечания от первых читателей, а не продавать черновик. Когда раздел закроется, цена будет €19 — тем, кто оставил почту, обновление придёт бесплатно. Для сравнения: посредник за регистрацию авто берёт 1 200 Kč сверх пошлины и делает 2–4 дня.</p>
 
   <p class="src">
     Первоисточники: Ministerstvo dopravy ČR —
@@ -139,7 +142,7 @@
     <a href="https://spzsluzby.cz/prihlaseni-dovezeneho-vozidla/" target="_blank" rel="noopener">spzsluzby.cz</a>;
     чешская инспекция труда —
     <a href="https://www.suip.cz/" target="_blank" rel="noopener">suip.cz</a>.
-    Требования и тарифы проверены 11. 11. 2026.
+    Требования и тарифы проверены 12. 11. 2026. Правовые основания: zákon 56/2001 Sb., 30/2024 Sb., 235/2004 Sb.
   </p>
 </main>
 
@@ -177,7 +180,15 @@
         form.style.display = "none";
         form.parentNode.querySelector(".ok").style.display = "block";
       }).catch(function () {
-        alert("Не получилось отправить. Напиши на почту — добавлю вручную.");
+        // Отправка не прошла — файл всё равно отдаём, но честно говорим про почту.
+        form.style.display = "none";
+        var box = form.parentNode.querySelector(".ok");
+        box.style.display = "block";
+        var note = document.createElement("p");
+        note.className = "fine";
+        note.innerHTML = "Адрес не сохранился. Если хочешь получать обновления — напиши на " +
+          '<a href="mailto:autoreg.cz@gmail.com">autoreg.cz@gmail.com</a>.';
+        box.insertAdjacentElement("afterend", note);
       });
     });
   });
