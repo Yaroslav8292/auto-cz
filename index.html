@@ -40,6 +40,20 @@
   .fine{font-size:13px;color:var(--muted);margin:9px 0 0}
   .ok{display:none;background:#e8f5ee;border:1px solid #bfe0cc;color:#185c3a;padding:13px;border-radius:10px;margin-top:11px;font-size:15px}
   .ok a{color:#185c3a;font-weight:700}
+  .calc{display:grid;grid-template-columns:repeat(3,1fr);gap:13px;margin:8px 0 0}
+  .calc label{display:block;font-size:13px;color:var(--muted)}
+  .calc label small{display:block;font-size:11.5px;margin-top:4px;line-height:1.35}
+  .calc input,.calc select{font:inherit;font-size:15px;color:var(--ink);padding:10px 12px;border:1px solid #c9d2cf;border-radius:10px;background:#fff;width:100%;margin-top:6px}
+  .calc-hint{color:var(--muted);font-size:14.5px;margin:14px 0 0}
+  .verdict{margin-top:6px}
+  .row{border:1px solid;border-radius:11px;padding:13px 15px;margin-top:10px;font-size:15px}
+  .row b{font-weight:650}
+  .row small{display:block;margin-top:5px;font-size:13px;line-height:1.45}
+  .row.bad{background:var(--warn-soft);border-color:#f0dcc0;color:#6b3b00}
+  .row.mid{background:#fdfaea;border-color:#eadfb8;color:#6b5a00}
+  .row.good{background:var(--accent-soft);border-color:#cfe3dc;color:#124a3c}
+  .calc-cta{font-size:14px;color:var(--muted);margin:15px 0 0}
+  .calc-cta a{color:var(--accent);font-weight:600}
   .ok small{display:block;margin-top:7px;font-size:12.5px;line-height:1.45;color:#3d6a52;font-weight:400}
   .facts{display:grid;grid-template-columns:repeat(3,1fr);gap:11px;margin:18px 0 0}
   .fact{background:#fff;border:1px solid var(--line);border-radius:11px;padding:13px}
@@ -49,7 +63,7 @@
   .src a{color:var(--accent)}
   footer{font-size:12px;color:var(--muted);padding-bottom:44px}
   @media (max-width:640px){
-    h1{font-size:26px} .facts{grid-template-columns:1fr} form{grid-template-columns:1fr} button{width:100%}
+    h1{font-size:26px} .facts{grid-template-columns:1fr} form{grid-template-columns:1fr} button{width:100%} .calc{grid-template-columns:1fr}
     .card{padding:20px}
   }
 </style>
@@ -85,6 +99,8 @@
       <li>Чек-лист на один лист: распечатал, пошёл, зарегистрировал.</li>
     </ul>
 
+    <p class="fine">Не уверен, попадает ли твоя машина в DPH и нужен ли полный техосмотр — проверь в блоке ниже, это 20 секунд.</p>
+
     <div class="buy">
       <div class="price">Бесплатно <s>€19</s></div>
       <p class="fine">Гайд готов: 26 страниц, факты проверены 12. 11. 2026. Оставь почту и скачай сразу — ссылка появится после отправки.</p>
@@ -96,6 +112,32 @@
         <small>Раздел про DPH написан по тексту закона, но четыре практических вопроса там помечены как открытые — их закрою после ответа налогового консультанта и пришлю обновление на эту почту.</small></div>
       <p class="fine">Если форма не отправилась — напиши на <a href="mailto:autoreg.cz@gmail.com">autoreg.cz@gmail.com</a>.</p>
     </div>
+  </section>
+
+  <!-- ============ ПРОВЕРКА МАШИНЫ ============ -->
+  <section class="card" id="check">
+    <div class="tag">Проверка · без VIN и без почты</div>
+    <h2>Проверить свою машину</h2>
+    <p class="who">Шесть данных из объявления и документов продавца. Блок показывает только то, что однозначно следует из закона — и ничего не обещает сверх него.</p>
+
+    <div class="calc">
+      <label>Первая регистрация
+        <input type="date" id="c-reg"></label>
+      <label>Пробег, км
+        <input type="number" id="c-km" min="0" step="1" inputmode="numeric" placeholder="48000"></label>
+      <label>HU действует до
+        <input type="date" id="c-hu"><small>нет документа о ТО — оставь пустым</small></label>
+      <label>COC есть?
+        <select id="c-coc"><option value="">—</option><option value="yes">да</option><option value="no">нет</option></select></label>
+      <label>Класс EURO
+        <select id="c-euro"><option value="">—</option><option value="3">EURO 3 и выше</option><option value="2">EURO 2</option><option value="1">EURO 1</option><option value="0">ниже EURO 1</option></select></label>
+      <label>Цена, €
+        <small>необязательно — покажу сумму DPH</small>
+        <input type="number" id="c-price" min="0" step="100" placeholder="15000"></label>
+    </div>
+
+    <div class="verdict" id="c-out" aria-live="polite"></div>
+    <p class="fine">Расчёт: § 19 zákona 235/2004 Sb., § 5a zákona 56/2001 Sb., сборы — по md.gov.cz. Не заменяет консультацию: пограничные случаи и порядок уплаты DPH разобраны в §3 гайда.</p>
   </section>
 
   <!-- ============ ОФФЕР D ============ -->
@@ -148,6 +190,7 @@
 
 <footer class="wrap">Материалы носят информационный характер и не являются юридической консультацией.</footer>
 
+<script src="check.js"></script>
 <script>
   // FormSubmit: адрес уже подставлен. После первого сабмита придёт письмо-активация.
   var ENDPOINT = "https://formsubmit.co/ajax/autoreg.cz@gmail.com";
